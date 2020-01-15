@@ -14,9 +14,9 @@ task :init do
 end
 
 # Test Setup
-Rake::TestTask.new() do |t|
+Rake::TestTask.new do |t|
   t.libs << 'test'
-  t.test_files = FileList['test/**/*_test.rb']
+  t.test_files = FileList['test/**/test_*.rb', 'test/**/*_test.rb']
   p t
 end
 
