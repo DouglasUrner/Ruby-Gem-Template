@@ -7,7 +7,7 @@ task :init do
 
     sh 'mv', f, f.gsub('GEM', ENV['name'])
   end
-  Dir.glob('*/GEM.*') do |f|
+  Dir.glob('*/*GEM.*') do |f|
 
     sh 'mv', f, f.gsub('GEM', ENV['name'])
   end
